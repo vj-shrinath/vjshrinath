@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    google: "google85615469255f0211",
+    google: "kb1KnyXlQzjYtnbE9VluOFI-4OYNg15RadI7wSBLcZQ",
   },
   openGraph: {
     title: "Vijay Shrinath | Pro Full Stack Developer Portfolio",
