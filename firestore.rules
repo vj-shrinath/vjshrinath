@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Portfolios are public and can be read by anyone.
+    // Writing should be restricted to authenticated users who own the portfolio.
+    // We will add more secure rules later on.
+    match /portfolios/{portfolioId} {
+      allow read: if true;
+      allow write: if false; // Initially locked down, will be updated for auth users
+    }
+  }
+}
