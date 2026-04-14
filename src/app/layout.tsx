@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  verification: {
+    google: "google85615469255f0211",
+  },
   openGraph: {
     title: "Vijay Shrinath | Pro Full Stack Developer Portfolio",
     description: "Building premium digital experiences with Next.js & React. Explore my work and get in touch for high-performance web development.",
