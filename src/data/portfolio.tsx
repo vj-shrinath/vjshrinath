@@ -2,9 +2,9 @@ import { Code, Database, Smartphone, Cloud, GitMerge, Palette, Server, TestTubeD
 import type { LucideIcon } from 'lucide-react';
 import { Html5Icon, Css3Icon, JavascriptIcon, ReactIcon, NextjsIcon, TailwindCssIcon } from '@/components/ui/custom-icons';
 
-export const aboutMeText = `I am a results-driven Web Developer and Digital Marketer who bridges the gap between technical excellence and digital growth. With expertise in Next.js, React, and modern web technologies, I build high-performance, user-centric applications. Beyond coding, I leverage data-driven digital marketing strategies—including SEO, content strategy, and social media growth—to ensure that what I build reaches the right audience.
+export const aboutMeText = `I am a results-driven Freelance Full Stack Web Developer and Digital Marketer specialized in building high-performance, custom web applications that drive digital growth. With deep expertise in Next.js, React, and Node.js, I bridge the gap between technical excellence and business impact. 
 
-My unique dual-focus allows me to create digital experiences that not only look great and perform flawlessly but also rank well and convert visitors into loyal users. Whether it's crafting a complex web application or orchestrating a targeted marketing campaign, I bring a holistic approach to digital success, always aiming to deliver measurable impact.`;
+By leveraging advanced SEO strategies, content systems, and scalable web architecture, I ensure that my clients' digital assets not only function flawlessly but also dominate search rankings and convert traffic into loyal customers. Whether you need a sophisticated SaaS platform, a high-converting e-commerce site, or a premium portfolio, I deliver measurable success through a holistic, data-driven approach to web development.`;
 
 type SkillLevel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
 
@@ -50,41 +50,41 @@ export const skillsData: Record<string, Skill[]> = {
 
 export const softwareProjects = [
     {
-        title: 'Personal Portfolio Website',
-        description: 'This very website! A responsive and interactive portfolio built with Next.js, Tailwind CSS, and TypeScript to showcase my skills and projects. Features AI-enhanced profile generation.',
+        title: 'Premium Developer Portfolio',
+        description: 'A high-performance, SEO-optimized portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Features a custom glassmorphism UI, advanced JSON-LD structured data, and dynamic AI-enhanced interfaces for professional representation.',
         imageUrl: '/images/Personal Portfolio Website project.png',
-        imageHint: 'website design',
-        tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'GenAI'],
+        imageHint: 'professional developer portfolio site',
+        tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'SEO'],
         category: 'Web',
-        liveUrl: '#', // Link to the current site
-        repoUrl: 'https://github.com/vj-shrinath/portfolio-website',
+        liveUrl: '#',
+        repoUrl: 'https://github.com/vj-shrinath/vjshrinath',
     },
     {
-        title: 'Patrikaa - Digital Invitation',
-        description: 'A premium digital invitation platform for creating localized Indian wedding cards. Features a visual editor, multiple themes, and downloadable invites.',
+        title: 'Patrikaa | SaaS Invitation Platform',
+        description: 'A scalable Full Stack digital invitation SaaS specialized for the Indian market. Built with Next.js and React, it features a custom visual editor, theme engines, and high-performance asset rendering.',
         imageUrl: '/images/patrikaa-demo.png',
-        imageHint: 'Patrikaa digital invitation app',
-        tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+        imageHint: 'Patrikaa digital invitation SaaS',
+        tags: ['Next.js', 'SaaS', 'React', 'Tailwind CSS', 'Framer Motion'],
         category: 'Web',
         liveUrl: 'https://patrikaa.vercel.app/',
         repoUrl: 'https://github.com/vj-shrinath/Patrikaa',
     },
     {
-        title: 'Shri Gajanan Bhaktisagar',
-        description: 'A comprehensive devotional app for devotees of Shri Gajanan Maharaj. Features a vast collection of stotras, aartis, and religious texts for daily worship.',
+        title: 'Shri Gajanan Bhaktisagar | Android App',
+        description: 'A high-traffic devotional Android application built with Java. Features localized content delivery, offline access, and a user-centric UI serving thousands of daily active users.',
         imageUrl: 'https://play-lh.googleusercontent.com/Vf59CLmlYcnGQACaQzj2LE-_RLN7QQI-PM85oJAJKDulIqszZGWRmAHTIMAiCoKwmnw=w480-h960-rw',
-        imageHint: 'devotional android app',
-        tags: ['Android', 'Mobile App', 'Java'],
+        imageHint: 'high-traffic android application',
+        tags: ['Android', 'Mobile Development', 'Java', 'User Growth'],
         category: 'Android',
         liveUrl: 'https://play.google.com/store/apps/details?id=com.shri_gajanan_bhaktisagar&hl=en-us',
         repoUrl: '#',
     },
     {
-        title: 'MVS Photography Quotation Maker',
-        description: 'A specialized tool for photographers to generate professional quotations. Features include PDF generation, customizable templates, and an admin dashboard for managing services and rates.',
+        title: 'MVS Photography | B2B Management Tool',
+        description: 'A professional B2B tool for photographers to automate quotations and service management. Built with Flutter and Firebase, featuring real-time PDF generation and secure admin controls.',
         imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczO-OGLmVmgphBNkts7BQYP6CI-L8qcVt7tkPzQd4UUEWthizqxzA_sJV_-aCnoD2OTQTxMtMTsECtLlmreAk4BQVDGH1nn-Vhr7GoXOkc-PWW7mWinnNbSX25b4138QFI9FQymJDxb-ilLiF1wHoBHw=w1626-h915-s-no-gm',
-        imageHint: 'photography quotation app',
-        tags: ['Flutter', 'Dart', 'Firebase', 'PDF Generation'],
+        imageHint: 'B2B management application',
+        tags: ['Flutter', 'Dart', 'Firebase', 'PDF Tech'],
         category: 'Android',
         liveUrl: '#',
         repoUrl: '#',

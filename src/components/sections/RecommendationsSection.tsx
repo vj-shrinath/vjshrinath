@@ -1,9 +1,9 @@
-
+"use client";
 import SectionTitle from '@/components/shared/SectionTitle';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Quote, User, Building } from 'lucide-react';
+import { Quote, User, Building, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { motion } from 'framer-motion';
 
 const recommendations = [
   {
@@ -17,40 +17,49 @@ const recommendations = [
 
 export default function RecommendationsSection() {
   return (
-    <section id="recommendations" className="py-20 bg-background">
+    <section id="recommendations" className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle subtitle="What others say about me.">Recommendations</SectionTitle>
+        <SectionTitle subtitle="Client and mentor testimonials.">Recommendations</SectionTitle>
+        
         <div className="max-w-4xl mx-auto">
           {recommendations.map((rec, index) => (
-            <Card key={index} className="shadow-xl rounded-lg overflow-hidden">
-              <CardHeader className="bg-primary/5 p-6">
-                <Quote className="h-10 w-10 text-accent" />
-              </CardHeader>
-              <CardContent className="p-6">
-                <p className="text-lg text-foreground font-body leading-relaxed italic mb-6">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative p-8 md:p-12 rounded-[2rem] glass-dark border border-white/5 shadow-2xl overflow-hidden"
+            >
+              <Quote className="absolute top-8 right-8 h-16 w-16 text-primary/10 -rotate-12" />
+              
+              <div className="relative z-10">
+                <p className="text-xl md:text-2xl text-white/90 font-sans leading-relaxed italic mb-10">
                   "{rec.text}"
                 </p>
-                <div className="flex items-center">
-                  <div className="flex-grow">
-                    <p className="font-bold text-primary text-xl font-headline flex items-center">
-                      <User className="mr-2 h-5 w-5" /> {rec.author}
-                    </p>
-                    <p className="text-muted-foreground flex items-center">
-                      <Building className="mr-2 h-4 w-4" /> {rec.title}, {rec.company}
-                    </p>
+                
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-white/10 pt-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center">
+                      <User className="text-white h-7 w-7" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white font-headline">{rec.author}</h4>
+                      <p className="text-primary text-sm font-semibold flex items-center gap-2">
+                        <Building className="h-4 w-4" /> {rec.title} @ {rec.company}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-              {rec.url && (
-                <CardFooter className="bg-muted/30 p-4 flex justify-end">
-                    <Button asChild variant="outline" size="sm">
-                        <Link href={rec.url} target="_blank" rel="noopener noreferrer">
-                        View Original
-                        </Link>
+
+                  {rec.url && (
+                    <Button asChild variant="outline" className="rounded-full border-white/10 hover:bg-white/5 text-white/70 hover:text-white">
+                      <Link href={rec.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> View Original
+                      </Link>
                     </Button>
-                </CardFooter>
-              )}
-            </Card>
+                  )}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

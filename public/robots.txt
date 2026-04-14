@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vj-shrinath.github.io/vjshrinath/sitemap.xml

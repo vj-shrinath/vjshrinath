@@ -1,12 +1,11 @@
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import Link from 'next/link';
 
-// Simple inline SVG for WhatsApp icon as it is not in lucide-react
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="28"
-    height="28"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -19,36 +18,51 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="flex justify-center space-x-6 mb-6">
-          <Link href="https://github.com/vj-shrinath" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-accent transition-colors">
-            <Github size={28} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/vijay-shrinath" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-accent transition-colors">
-            <Linkedin size={28} />
-          </Link>
-          <Link href="https://instagram.com/vjshrinath" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-accent transition-colors">
-            <Instagram size={28} />
-          </Link>
-          <Link href="https://wa.me/918668439274" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-accent transition-colors">
-            <WhatsAppIcon />
-          </Link>
-          <Link href="mailto:vjshrinath@outlook.com" aria-label="Email" className="hover:text-accent transition-colors">
-            <Mail size={28} />
-          </Link>
+    <footer className="py-20 bg-background border-t border-white/5">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-black font-headline text-white mb-2">
+              Vijay<span className="text-primary">.</span>S
+            </h2>
+            <p className="text-muted-foreground text-sm max-w-xs">
+              Crafting high-quality digital experiences with passion and precision.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center md:items-end gap-6">
+            <div className="flex items-center space-x-5">
+              <Link href="https://github.com/vj-shrinath" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Github size={20} />
+              </Link>
+              <Link href="https://linkedin.com/in/vjshrinath" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Linkedin size={20} />
+              </Link>
+              <Link href="https://instagram.com/vjshrinath" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Instagram size={20} />
+              </Link>
+              <Link href="https://wa.me/918668439274" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <WhatsAppIcon />
+              </Link>
+              <Link href="mailto:vjshrinath@outlook.com" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Mail size={20} />
+              </Link>
+            </div>
+            
+            <div className="text-center md:text-right space-y-1">
+              <p className="text-xs text-muted-foreground">
+                &copy; {currentYear} Vijay Gopal Shrinath. All rights reserved.
+              </p>
+              <p className="text-[10px] text-muted-foreground/50 uppercase tracking-widest font-bold">
+                Built with Next.js & Framer Motion
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="text-sm">
-          &copy; {currentYear} Vijay Gopal Shrinath. All rights reserved.
-        </p>
-        <p className="text-xs mt-2">
-          Built with Next.js and Tailwind CSS. Hosted on Firebase.
-        </p>
       </div>
     </footer>
   );

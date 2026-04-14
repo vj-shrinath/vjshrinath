@@ -1,9 +1,9 @@
-
+"use client";
 import SectionTitle from '@/components/shared/SectionTitle';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { motion } from 'framer-motion';
 
 const certifications = [
    {
@@ -34,30 +34,55 @@ const certifications = [
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle subtitle="My certifications and professional development.">Certifications</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="certifications" className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <SectionTitle subtitle="My professional certifications and achievements.">Certifications</SectionTitle>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
-              <CardHeader>
-                <CardTitle className="flex items-start">
-                  <BadgeCheck className="h-8 w-8 text-accent mr-3 flex-shrink-0" />
-                  <span className="text-xl font-headline text-primary">{cert.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground font-semibold">{cert.issuer}</p>
-                <p className="text-sm text-muted-foreground mb-4">{cert.date}</p>
-                {cert.url !== '#' && (
-                  <Button asChild variant="outline" size="sm">
-                    <Link href={cert.url} target="_blank" rel="noopener noreferrer">
-                      View Credential
-                    </Link>
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-1 rounded-3xl bg-gradient-to-tr from-white/5 to-white/10 hover:from-primary/20 hover:to-accent/20 transition-all duration-500 group"
+            >
+              <div className="h-full p-8 rounded-[22px] glass-dark border border-white/5 flex flex-col justify-between overflow-hidden relative">
+                <div className="relative z-10 flex gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <BadgeCheck className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold font-headline text-white leading-tight">
+                      {cert.title}
+                    </h3>
+                    <div className="flex items-center gap-3 text-sm">
+                      <span className="font-semibold text-primary">{cert.issuer}</span>
+                      <span className="text-white/20">•</span>
+                      <span className="text-muted-foreground">{cert.date}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex justify-end relative z-10">
+                  {cert.url !== '#' && (
+                    <Button asChild variant="link" className="text-primary hover:text-white p-0 h-auto font-bold uppercase tracking-widest text-[10px]">
+                      <Link href={cert.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Verify Credential <ExternalLink className="ml-2 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  )}
+                </div>
+                
+                {/* Decorative background number */}
+                <span className="absolute bottom-[-20%] right-[-5%] text-9xl font-black text-white/[0.02] pointer-events-none group-hover:text-primary/[0.05] transition-colors italic">
+                  0{index + 1}
+                </span>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

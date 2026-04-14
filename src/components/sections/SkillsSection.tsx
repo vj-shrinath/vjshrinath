@@ -1,3 +1,4 @@
+"use client";
 import SectionTitle from '@/components/shared/SectionTitle';
 import SkillBadge from '@/components/shared/SkillBadge';
 import { skillsData } from '@/data/portfolio';

@@ -1,9 +1,11 @@
+"use client";
 import SectionTitle from '@/components/shared/SectionTitle';
 import { Button } from '@/components/ui/button';
-import { Instagram, Mail } from 'lucide-react';
+import { Instagram, Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import ContactForm from '../shared/ContactForm';
 
-// Simple inline SVG for WhatsApp icon as it is not in lucide-react
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -23,33 +25,63 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-indigo-50 dark:bg-indigo-900/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <SectionTitle subtitle="Have a project in mind? Let's talk.">Contact Me</SectionTitle>
-        <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-          I am currently available for freelance work and open to discussing new projects. If you're looking for a dedicated developer to bring your ideas to life, I'd love to hear from you.
-        </p>
-        <div className="flex justify-center items-center flex-wrap gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 hover:scale-105 shadow-lg">
-                <Link href="mailto:vjshrinath@outlook.com">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Email Me
-                </Link>
-            </Button>
-            <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#25D366]/90 transition-transform duration-300 hover:scale-105 shadow-lg">
-                <Link href="https://wa.me/918668439274" target='_blank' rel='noopener noreferrer'>
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
-                    WhatsApp
-                </Link>
-            </Button>
-            <Button asChild size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90 transition-transform duration-300 hover:scale-105 shadow-lg">
-                <Link href="https://instagram.com/vjshrinath" target='_blank' rel='noopener noreferrer'>
-                    <Instagram className="mr-2 h-5 w-5" />
-                    Instagram
-                </Link>
-            </Button>
+    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <SectionTitle subtitle="Have a project in mind? Let's bring it to life.">Let's Connect</SectionTitle>
+        
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          {/* Contact Details & Socials */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 space-y-10"
+          >
+            <div className="space-y-4">
+              <h3 className="text-3xl font-bold font-headline text-white">Let's talk about your vision.</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                I'm currently available for freelance work and open to new collaborations. 
+                Whether you have a specific project or just a vague idea, my inbox is always open.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 group cursor-pointer">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest font-bold">Email Me</p>
+                  <a href="mailto:vjshrinath@outlook.com" className="text-lg text-white hover:text-primary transition-colors">vjshrinath@outlook.com</a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex gap-3">
+                  <Link href="https://wa.me/918668439274" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all">
+                    <WhatsAppIcon />
+                  </Link>
+                  <Link href="https://instagram.com/vjshrinath" target="_blank" className="p-3 rounded-full glass-dark hover:bg-primary/20 hover:text-primary transition-all">
+                    <Instagram size={24} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-3 p-8 md:p-10 rounded-[2.5rem] glass-dark border border-white/5 shadow-2xl"
+          >
+            <ContactForm />
+          </motion.div>
         </div>
       </div>
+
+      <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
     </section>
   );
 }
