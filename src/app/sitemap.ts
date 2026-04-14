@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://vj-shrinath.github.io/vjshrinath';
+  const baseUrl = 'https://vjshrinath.vercel.app';
 
   return [
     {

@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vjshrinath.vercel.app"),
   title: "Vijay Shrinath | Premium Freelance Full Stack Developer & Next.js Expert",
   description: "Hire Vijay Shrinath, a professional Full Stack Web Developer specializing in Next.js, React, and scalable digital solutions. Expert in building high-performance web applications and driving business growth through technical excellence.",
   keywords: ["Freelance Web Developer", "Next.js Expert", "React Developer for Hire", "Full Stack Developer Portfolio", "Remote Software Engineer", "Hire Web Developer India", "Professional Web Application Developer"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vijay Shrinath | Pro Full Stack Developer Portfolio",
     description: "Building premium digital experiences with Next.js & React. Explore my work and get in touch for high-performance web development.",
-    url: "https://vj-shrinath.github.io/vjshrinath",
+    url: "https://vjshrinath.vercel.app",
     siteName: "Vijay Shrinath Portfolio",
     images: [
       {
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://vj-shrinath.github.io/vjshrinath",
+    canonical: "https://vjshrinath.vercel.app",
   },
 };
 
@@ -79,8 +80,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Vijay Gopal Shrinath",
-              "url": "https://vj-shrinath.github.io/vjshrinath",
-              "image": "https://vj-shrinath.github.io/vjshrinath/profile-photo.jpeg",
+              "url": "https://vjshrinath.vercel.app",
+              "image": "https://vjshrinath.vercel.app/profile-photo.jpeg",
               "sameAs": [
                 "https://github.com/vj-shrinath",
                 "https://linkedin.com/in/vjshrinath",
@@ -95,7 +96,7 @@ export default function RootLayout({
               "knowsAbout": ["Web Development", "Next.js", "React", "Node.js", "Firebase", "Digital Marketing", "SEO"],
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://vj-shrinath.github.io/vjshrinath"
+                "@id": "https://vjshrinath.vercel.app"
               }
             }
           `}
