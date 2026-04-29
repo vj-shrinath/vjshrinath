@@ -1,6 +1,6 @@
 import { Code, Database, Smartphone, Cloud, GitMerge, Palette, Server, TestTubeDiagonal, Search, TrendingUp, Share2, FileText, Mail } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { Html5Icon, Css3Icon, JavascriptIcon, ReactIcon, NextjsIcon, TailwindCssIcon } from '@/components/ui/custom-icons';
+import { Html5Icon, Css3Icon, JavascriptIcon, ReactIcon, NextjsIcon, TailwindCssIcon, SupabaseIcon, FlutterIcon } from '@/components/ui/custom-icons';
 
 export const aboutMeText = `I am a results-driven Freelance Full Stack Web Developer and Digital Marketer specialized in building high-performance, custom web applications that drive digital growth. With deep expertise in Next.js, React, and Node.js, I bridge the gap between technical excellence and business impact. 
 
@@ -32,12 +32,15 @@ export const skillsData: Record<string, Skill[]> = {
         { name: 'MongoDB', Icon: Database, level: 'Intermediate', color: '#47A248' },
         { name: 'PostgreSQL', Icon: Database, level: 'Beginner', color: '#336791' },
         { name: 'Firebase', Icon: Cloud, level: 'Intermediate', color: '#FFCA28' },
+        { name: 'Supabase', Icon: SupabaseIcon, level: 'Advanced', color: '#3ECF8E' },
     ],
     tools: [
         { name: 'Git & GitHub', Icon: GitMerge, level: 'Advanced', color: '#000000' },
         { name: 'VS Code', Icon: Code, level: 'Expert', color: '#007ACC' },
         { name: 'Figma', Icon: Palette, level: 'Intermediate', color: '#F24E1E' },
         { name: 'Jest / RTL', Icon: TestTubeDiagonal, level: 'Beginner', color: '#C21325' },
+        { name: 'Flutter', Icon: FlutterIcon, level: 'Advanced', color: '#02569B' },
+        { name: 'Cloudflare', Icon: Cloud, level: 'Advanced', color: '#F38020' },
     ],
     digitalMarketing: [
         { name: 'SEO', Icon: Search, level: 'Advanced', color: '#4285F4' },
@@ -49,6 +52,16 @@ export const skillsData: Record<string, Skill[]> = {
 };
 
 export const softwareProjects = [
+    {
+        title: 'Power Soul Fitness | Full-Stack Fitness Ecosystem',
+        description: 'A premium fitness platform featuring an immersive "social-first" user experience with a native-feeling story system, glassmorphism design, and dual-platform admin suite (Web CMS & Flutter App). Optimized for speed using Edge Runtime and custom client-side image compression, reducing storage costs by 70%.',
+        imageUrl: '/images/powersoulfitness.png',
+        imageHint: 'premium fitness ecosystem dashboard',
+        tags: ['Next.js 15', 'Supabase', 'Flutter', 'Cloudflare Pages', 'Edge Runtime', 'Framer Motion'],
+        category: 'Web',
+        liveUrl: 'https://powersoulfitness.com/',
+        repoUrl: 'https://github.com/vj-shrinath/powersoulfitness',
+    },
     {
         title: 'Premium Developer Portfolio',
         description: 'A high-performance, SEO-optimized portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Features a custom glassmorphism UI, advanced JSON-LD structured data, and dynamic AI-enhanced interfaces for professional representation.',
