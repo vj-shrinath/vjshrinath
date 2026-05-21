@@ -2,9 +2,9 @@ import { Code, Database, Smartphone, Cloud, GitMerge, Palette, Server, TestTubeD
 import type { LucideIcon } from 'lucide-react';
 import { Html5Icon, Css3Icon, JavascriptIcon, ReactIcon, NextjsIcon, TailwindCssIcon, SupabaseIcon, FlutterIcon } from '@/components/ui/custom-icons';
 
-export const aboutMeText = `I am a results-driven Freelance Full Stack Web Developer and Digital Marketer specialized in building high-performance, custom web applications that drive digital growth. With deep expertise in Next.js, React, and Node.js, I bridge the gap between technical excellence and business impact. 
-
-By leveraging advanced SEO strategies, content systems, and scalable web architecture, I ensure that my clients' digital assets not only function flawlessly but also dominate search rankings and convert traffic into loyal customers. Whether you need a sophisticated SaaS platform, a high-converting e-commerce site, or a premium portfolio, I deliver measurable success through a holistic, data-driven approach to web development.`;
+export const aboutMeText = `I am the leading Freelance Web Developer and Digital Marketing Expert specialized in helping businesses across Maharashtra—from Pune to Mumbai—achieve scalable online growth. With deep expertise in Next.js, React, and technical SEO, I bridge the gap between premium modern design and immediate business impact.
+ 
+Unlike generic developers, I build for conversions and local search authority. By leveraging advanced SEO strategies, high-speed web architecture, and targeted content systems, I ensure your digital assets dominate "near me" searches and turn visitors into high-intent leads. Whether you need a high-converting e-commerce site or a lead-generating corporate platform, I deliver measurable success through a data-driven, business-first approach.`;
 
 type SkillLevel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
 
@@ -148,7 +148,7 @@ export const marketingProjects = [
     {
         title: 'Social Media Campaign Strategy',
         description: 'Developed and executed a comprehensive social media strategy for a local brand, resulting in a 40% increase in engagement and 25% growth in follower count over 3 months.',
-        imageUrl: '/images/digital-marketing-1.jpg',
+        imageUrl: '/images/digital-marketing-1.png',
         imageHint: 'social media strategy',
         tags: ['Social Media Marketing', 'Content Strategy', 'Analytics'],
         category: 'Social Media',
@@ -158,7 +158,7 @@ export const marketingProjects = [
     {
         title: 'SEO Optimization Project',
         description: 'Conducted a full SEO audit and implemented on-page and off-page optimization techniques, improving organic search rankings for key keywords.',
-        imageUrl: '/images/digital-marketing-2.jpg',
+        imageUrl: '/images/digital-marketing-2.png',
         imageHint: 'seo optimization',
         tags: ['SEO', 'Keyword Research', 'Google Analytics'],
         category: 'SEO',
@@ -168,7 +168,7 @@ export const marketingProjects = [
     {
         title: 'Email Marketing Automation',
         description: 'Designed and set up an automated email marketing sequence, increasing open rates by 15% and click-through rates by 10%.',
-        imageUrl: '/images/digital-marketing-3.jpg',
+        imageUrl: '/images/digital-marketing-3.png',
         imageHint: 'email marketing',
         tags: ['Email Marketing', 'Automation', 'Copywriting'],
         category: 'Email Marketing',
@@ -178,7 +178,7 @@ export const marketingProjects = [
     {
         title: 'Social Media Graphics Suite',
         description: 'Designed a complete suite of high-conversion social media graphics for Instagram and LinkedIn campaigns. Focused on brand consistency and visual storytelling.',
-        imageUrl: '/images/social-media-graphics.jpg',
+        imageUrl: '/images/social-media-graphics.png',
         imageHint: 'social media graphics',
         tags: ['Graphic Design', 'Canva', 'Photoshop', 'Branding'],
         category: 'Graphics',
@@ -188,7 +188,7 @@ export const marketingProjects = [
     {
         title: 'Google Ads PPC Campaign',
         description: 'Managed a high-budget Google Ads campaign. Optimized ad copy and bidding strategies to lower CPC by 20% while increasing conversion volume.',
-        imageUrl: '/images/google-ads.jpg',
+        imageUrl: '/images/google-ads.png',
         imageHint: 'google ads dashboard',
         tags: ['PPC', 'Google Ads', 'SEM', 'ROI Optimization'],
         category: 'Ads',

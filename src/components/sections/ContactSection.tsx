@@ -27,7 +27,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionTitle subtitle="Have a project in mind? Let's bring it to life.">Let's Connect</SectionTitle>
+        <SectionTitle subtitle="Ready to generate more leads and dominate local search? Let's talk strategy.">Get in Touch</SectionTitle>
         
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Contact Details & Socials */}
@@ -38,10 +38,10 @@ export default function ContactSection() {
             className="lg:col-span-2 space-y-10"
           >
             <div className="space-y-4">
-              <h3 className="text-3xl font-bold font-headline text-white">Let's talk about your vision.</h3>
+              <h3 className="text-3xl font-bold font-headline text-white">Ready to scale your business in Maharashtra?</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I'm currently available for freelance work and open to new collaborations. 
-                Whether you have a specific project or just a vague idea, my inbox is always open.
+                Partner with the top web development and SEO expert serving Pune, Mumbai, and all of Maharashtra. 
+                Whether you need a high-converting website or a comprehensive digital marketing strategy, my inbox is open. Book a free consultation today!
               </p>
             </div>
 

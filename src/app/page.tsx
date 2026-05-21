@@ -7,6 +7,7 @@ import ResumeSection from '@/components/sections/ResumeSection';
 import AboutMeSection from '@/components/sections/AboutMeSection';
 import CertificationsSection from '@/components/sections/CertificationsSection';
 import RecommendationsSection from '@/components/sections/RecommendationsSection';
+import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
         <CertificationsSection />
         <AboutMeSection />
         <RecommendationsSection />
+        <FAQSection />
         <ContactSection />
         <ResumeSection />
       </main>

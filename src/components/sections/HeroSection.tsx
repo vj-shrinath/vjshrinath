@@ -49,15 +49,14 @@ export default function HeroSection() {
             className="text-center"
           >
             <h2 className="text-sm md:text-base font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4">
-              Building Digital Experiences
+              Freelance Web Developer & Digital Marketing Expert in Maharashtra
             </h2>
             <h1 className="text-5xl md:text-8xl font-black mb-6 font-headline tracking-tight">
               <span className="text-foreground">Vijay </span>
               <span className="text-gradient">Shrinath</span>
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Full Stack Web Developer crafting high-performance, 
-              visually stunning digital solutions through code and creativity.
+              I help businesses across Maharashtra generate more leads with fast, SEO-optimized, and conversion-focused custom websites.
             </p>
           </motion.div>
 
@@ -68,10 +67,10 @@ export default function HeroSection() {
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
             <Button asChild size="lg" className="h-14 px-8 text-lg font-medium rounded-full bg-primary hover:bg-primary/90 shadow-[0_10px_40px_-10px_rgba(var(--primary),0.5)] transition-all hover:scale-105">
-              <Link href="#projects">Explore Projects</Link>
+              <Link href="#contact">Book a Free Strategy Call</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 px-8 text-lg font-medium rounded-full border-primary/20 hover:bg-primary/5 backdrop-blur-sm transition-all hover:scale-105">
-              <Link href="#contact">Get in Touch</Link>
+              <Link href="#projects">View My Work</Link>
             </Button>
           </motion.div>
 

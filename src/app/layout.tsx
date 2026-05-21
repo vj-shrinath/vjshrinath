@@ -5,9 +5,9 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vjshrinath.vercel.app"),
-  title: "Vijay Shrinath | Premium Freelance Full Stack Developer & Next.js Expert",
-  description: "Hire Vijay Shrinath, a professional Full Stack Web Developer specializing in Next.js, React, and scalable digital solutions. Expert in building high-performance web applications and driving business growth through technical excellence.",
-  keywords: ["Freelance Web Developer", "Next.js Expert", "React Developer for Hire", "Full Stack Developer Portfolio", "Remote Software Engineer", "Hire Web Developer India", "Professional Web Application Developer"],
+  title: "Vijay Shrinath | Freelance Web Developer & Digital Marketing Expert in Maharashtra",
+  description: "Hire Vijay Shrinath, the leading Freelance Web Developer and Digital Marketing Expert in Maharashtra. Specializing in high-performance, SEO-optimized, and conversion-focused websites to generate leads and grow local businesses.",
+  keywords: ["Freelance Web Developer in Maharashtra", "Digital Marketing Expert in Maharashtra", "Ecommerce Website Developer near me", "SEO optimized websites", "Web Development Services Pune", "Local SEO Expert Maharashtra", "Custom Web Applications", "Next.js Expert India", "Professional Web Application Developer"],
   authors: [{ name: "Vijay Gopal Shrinath" }],
   creator: "Vijay Gopal Shrinath",
   publisher: "Vijay Gopal Shrinath",
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
     google: "kb1KnyXlQzjYtnbE9VluOFI-4OYNg15RadI7wSBLcZQ",
   },
   openGraph: {
-    title: "Vijay Shrinath | Pro Full Stack Developer Portfolio",
-    description: "Building premium digital experiences with Next.js & React. Explore my work and get in touch for high-performance web development.",
+    title: "Vijay Shrinath | Web Developer & Digital Marketing Expert in Maharashtra",
+    description: "Generate more leads with fast, SEO-optimized, and conversion-focused websites. Partner with Maharashtra's top freelance full-stack developer.",
     url: "https://vjshrinath.vercel.app",
-    siteName: "Vijay Shrinath Portfolio",
+    siteName: "Vijay Shrinath Web Development",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Vijay Shrinath - Professional Full Stack Developer",
+        alt: "Vijay Shrinath - Freelance Web Developer & Digital Marketing Expert",
       },
     ],
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vijay Shrinath | Freelance Full Stack Web Developer",
-    description: "Expert Next.js & React development for modern businesses.",
+    title: "Vijay Shrinath | Web Developer & Digital Marketing Expert",
+    description: "Growing local businesses in Maharashtra with high-performance, SEO-friendly custom websites.",
     images: ["/og-image.jpg"],
     creator: "@vjshrinath",
   },
@@ -76,32 +76,75 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
         
-        {/* JSON-LD Structured Data for Pro Developer Profile */}
+        {/* JSON-LD Structured Data for LocalBusiness & Person */}
         <Script id="json-ld" type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Vijay Gopal Shrinath",
-              "url": "https://vjshrinath.vercel.app",
-              "image": "https://vjshrinath.vercel.app/profile-photo.jpeg",
-              "sameAs": [
-                "https://github.com/vj-shrinath",
-                "https://linkedin.com/in/vjshrinath",
-                "https://instagram.com/vjshrinath"
-              ],
-              "jobTitle": "Full Stack Web Developer",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Freelance"
+            [
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Vijay Gopal Shrinath",
+                "url": "https://vjshrinath.vercel.app",
+                "image": "https://vjshrinath.vercel.app/profile-photo.jpeg",
+                "sameAs": [
+                  "https://github.com/vj-shrinath",
+                  "https://linkedin.com/in/vjshrinath",
+                  "https://instagram.com/vjshrinath"
+                ],
+                "jobTitle": "Freelance Web Developer & Digital Marketing Expert",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Vijay Shrinath Web Services"
+                },
+                "description": "Leading freelance full-stack web developer and digital marketing specialist based in Maharashtra. I build custom, SEO-friendly, and high-conversion websites for local businesses and startups.",
+                "knowsAbout": ["Web Development", "Next.js", "React", "Local SEO", "Digital Marketing", "Ecommerce Development", "Lead Generation"],
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://vjshrinath.vercel.app"
+                }
               },
-              "description": "Professional Full Stack Web Developer specializing in Next.js, React, and building scalable digital solutions for global clients.",
-              "knowsAbout": ["Web Development", "Next.js", "React", "Node.js", "Firebase", "Digital Marketing", "SEO"],
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://vjshrinath.vercel.app"
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Vijay Shrinath Digital Solutions",
+                "image": "https://vjshrinath.vercel.app/profile-photo.jpeg",
+                "@id": "https://vjshrinath.vercel.app",
+                "url": "https://vjshrinath.vercel.app",
+                "email": "vjshrinath@outlook.com",
+                "telephone": "+91-8668439274",
+                "priceRange": "$$",
+                "areaServed": [
+                  {
+                    "@type": "State",
+                    "name": "Maharashtra"
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Pune"
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Mumbai"
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Pimpri Chinchwad"
+                  }
+                ],
+                "description": "Premium Web Development, Ecommerce, and Digital Marketing Services optimized for businesses in Maharashtra, India."
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Vijay Shrinath - Web Developer",
+                "url": "https://vjshrinath.vercel.app",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://vjshrinath.vercel.app/#projects?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
               }
-            }
+            ]
           `}
         </Script>
       </head>
